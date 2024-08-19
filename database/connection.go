@@ -8,7 +8,8 @@ import (
 )
 
 func GetConnect() *sql.DB {
-	db, err := sql.Open("mysql", "root:hishasyl115a1408@tcp(localhost:3306)/belajar_go_db")
+	// parseTime=true //* agar bisa konversi tipe data date atau timestamp atau datetime dll
+	db, err := sql.Open("mysql", "root:hishasyl115a1408@tcp(localhost:3306)/belajar_go_db?parseTime=true")
 
 	if err != nil {
 		panic(err)
